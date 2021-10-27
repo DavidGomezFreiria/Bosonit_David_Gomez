@@ -24,16 +24,11 @@ public class Controller {
         Body.setId(id);
         if (Name == null) {
             return "envie el nombre correctamente";
-        }
-        else if (id  == 1313) {
+        } else if (id == 1313) {
             Body.setName(Name);
             return "Nombre: " + Body.getName() + "\nEdad:  " + Body.getEdad() + "\nPoblación:  " + Body.getPoblacion();
-        }
-        else {
+        } else {
             return "Nombre: " + Body.getName() + "\nEdad:  " + Body.getEdad() + "\nPoblación:  " + Body.getPoblacion();
         }
-    }
-    @DeleteMapping("persona/{id}") {
-
     }
 }
