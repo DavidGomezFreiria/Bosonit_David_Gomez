@@ -6,12 +6,12 @@ import org.springframework.web.bind.annotation.*;
 public class Controller2 {
     String names;
     @GetMapping("user/{name}")
-    public void GetUser(@PathVariable String name){
-        names = name;
+    public String GetUser(@PathVariable String name,@RequestBody Person person){
+        person.setName(name);
+        return "Hola "+person.getName();
     }
     @PostMapping("adduser")
-    public String SendUser() {
-        return names;
+    public String SendUser2(@RequestBody Person person) {
+        return "Nombre: "+person.getName();
     }
 }
-
