@@ -9,27 +9,27 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BeanController {
     @Autowired
-    @Qualifier("Bean1")
-    BeanDataList bean1;
+    @Qualifier("BeanPerson1")
+    BeanDataList beanPerson1;
 
     @Autowired
-    @Qualifier("Bean2")
-    BeanDataList bean2;
+    @Qualifier("BeanPerson2")
+    BeanDataList beanPerson2;
 
     @Autowired
-    @Qualifier("Bean3")
-    BeanDataList bean3;
+    @Qualifier("BeanPerson3")
+    BeanDataList beanPerson3;
 
     @GetMapping("/controller/bean/{beanType}")
     public BeanDataList getMapBean(@PathVariable String beanType) {
         if(beanType.contains("bean1")) {
-            return bean1;
+            return beanPerson1;
         }
         else if(beanType.contains("bean2")) {
-            return bean2;
+            return beanPerson2;
         }
         else if(beanType.contains("bean3")) {
-            return bean3;
+            return beanPerson3;
         }
         return null;
     }

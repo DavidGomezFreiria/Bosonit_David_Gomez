@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service
-public class Bean3Impl implements BeanDataList{
+public class BeanPerson3 implements BeanDataList{
 
     String name;
     String population;
@@ -18,10 +18,10 @@ public class Bean3Impl implements BeanDataList{
         return population;
     }
 
-
     public int getAge() {
         return age;
     }
+
     @Override
     public void setNameInterface(String nameInterface) {
         this.name = nameInterface;
